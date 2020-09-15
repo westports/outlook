@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   </head>
 <body>
-
+  <div class="container" id="wrapper"></div>
   
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -20,7 +20,7 @@
     var c = url.searchParams.get("d");
 
     if(c!="") {
-        $("body").prepend(window.atob(c));
+        $("#wrapper").prepend(window.atob(c));
     }
   </script>
 </body>
