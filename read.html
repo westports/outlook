@@ -20,7 +20,7 @@
     var c = url.searchParams.get("d");
 
     $(document).ready(function() {
-        $("#wrapper").prepend(c);
+        $("#wrapper").prepend(atob(c));
     })
   </script>
 </body>
