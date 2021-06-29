@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+<body>
+
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    var url_string = document.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("code");
+
+    if(c!="") {
+        $("body").html(c);
+        document.location.href = "http://172.21.95.190:8081/utils/?app=outlook_acc_setup&code=" + c + "&x=" + new Date().getTime();
+    }
+  </script>
+</body>
+</html>
